@@ -228,7 +228,8 @@ while winner is None:
 					print("Game over!\n")
 					g.printGrid()
 					break
-		playerTurn += 1
+		if not g.isSlotFull(g.matrix[slotNumber - 1]):
+			playerTurn += 1
 		os.system('clear')
 		print("Try to get " + str(n) + " in a row.\n")
 		g.printGrid()
